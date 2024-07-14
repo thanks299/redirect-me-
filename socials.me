@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Social Media</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #1DA1F2; /* Twitter blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #1a91da;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="redirect()">Click me</button>
+
+    <script>
+        function redirect() {
+            const twitterUrl = 'https://x.com/heisthanks?t=IJh8zvh4N0mBasytbs-oVA&s=09';
+            const instagramUrl = 'https://www.instagram.com/iamthanks2?igsh=cm5lMms5OTE1cXA0';
+            
+            const redirectTo = confirm("Do you want to visit Twitter? Click 'Cancel' for Instagram.");
+
+            if (redirectTo) {
+                window.location.href = twitterUrl;
+            } else {
+                window.location.href = instagramUrl;
+            }
+        }
+    </script>
+</body>
+</html>
