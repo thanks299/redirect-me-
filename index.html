@@ -9,36 +9,46 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #1DA1F2; /* Twitter blue */
             color: white;
             border: none;
             border-radius: 5px;
+            margin: 10px;
+        }
+
+        #twitterButton {
+            background-color: #1DA1F2; /* Twitter blue */
+        }
+
+        #twitterButton:hover {
+            background-color: #1a91da;
+        }
+
+        #instagramButton {
+            background-color: #E1306C; /* Instagram pink */
+        }
+
+        #instagramButton:hover {
+            background-color: #b82b5d;
         }
 
         button:focus {
             outline: none;
         }
-
-        button:hover {
-            background-color: #1a91da;
-        }
     </style>
 </head>
 <body>
-    <button onclick="redirect()">Click me</button>
+    <button id="twitterButton" onclick="redirectToTwitter()">Twitter</button>
+    <button id="instagramButton" onclick="redirectToInstagram()">Instagram</button>
 
     <script>
-        function redirect() {
+        function redirectToTwitter() {
             const twitterUrl = 'https://x.com/heisthanks?t=IJh8zvh4N0mBasytbs-oVA&s=09';
-            const instagramUrl = 'https://www.instagram.com/iamthanks2?igsh=cm5lMms5OTE1cXA0';
-            
-            const redirectTo = confirm("Do you want to visit Twitter? Click 'Cancel' for Instagram.");
+            window.location.href = twitterUrl;
+        }
 
-            if (redirectTo) {
-                window.location.href = twitterUrl;
-            } else {
-                window.location.href = instagramUrl;
-            }
+        function redirectToInstagram() {
+            const instagramUrl = 'https://www.instagram.com/iamthanks2?igsh=cm5lMms5OTE1cXA0';
+            window.location.href = instagramUrl;
         }
     </script>
 </body>
